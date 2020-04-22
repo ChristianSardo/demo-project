@@ -2,20 +2,17 @@ package br.edu.sc.senac.demo.demoproject;
 
 public final class ClientDTO {
 
-	public static final ProductDTO NULL_VALUE = new ProductDTO(Long.valueOf(0), "", "", Double.valueOf(0.0));
+	public static final ClientDTO NULL_VALUE = new ClientDTO("", "", "");
 
-	private final Long id;
 	private final String name;
 	private final String date;
+	private final String email;
 	
-	public ClientDTO(final Long id, final String name, final String date) {
-		this.id = id;
+	public ClientDTO(final String name, final String date, final String email) {
+	
 		this.name = name;
 		this.date = date;
-	}
-
-	public Long getId() {
-		return this.id;
+		this.email = email;
 	}
 
 	public String getName() {
@@ -24,6 +21,10 @@ public final class ClientDTO {
 
 	public String getDate() {
 		return this.date;
+	}
+	
+	public String getEmail() {
+		return this.email;
 	}
 
 }
